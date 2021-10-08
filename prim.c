@@ -100,3 +100,13 @@ int main() {
         tabela[i][2] = INT_MAX;
         tabela[i][3] = -1;
     }
+
+     printf("Origem: ");
+    int origem;
+    scanf("%d", &origem);
+    printf("\n");
+
+    grafos (matAdja, tabela, origem);
+
+    return 0;
+}
