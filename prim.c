@@ -32,3 +32,46 @@ void printResultado (int tabela[8][4]) {
     }
     printf("\nSoma: %d\n", soma);
 }
+
+void grafos (int mat[8][8], int tabela[8][4], int origem) {
+    int i = origem;
+  
+    tabela[i][2] = 0;
+    while (i < 8){ 
+        int menorCusto = INT_MAX;
+        printf("\nVisitando vértice %d", i);
+        tabela[i][1] = 1;
+        for (int j = 0; j < 8; j++) {
+            
+            if (mat[i][j] != 0 && tabela[j][2] > mat[i][j] && tabela[j][1] == 0) {
+                tabela[j][2] = mat[i][j];
+                tabela[j][3] = i;
+                
+            }
+        }
+
+        Tabela(tabela, i);
+
+        int count = 0;
+        for (int j = 0; j < 8; j++) {
+            if (tabela[j][1] != 0)
+                count++;
+            if (tabela[j][1] == 0){
+                j = 8;
+            }
+            if (count >= 7) {
+                i = 8;
+            }
+        }
+
+        for (int j = 0; j < 8; j++) {
+          
+            if (tabela[j][2] < menorCusto && tabela[j][1] == 0) {
+                menorCusto = tabela[j][2];
+                i = tabela[j][0];
+               
+            }
+        }
+    }
+    printResultado(tabela);
+}
