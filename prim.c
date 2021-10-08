@@ -92,3 +92,11 @@ int main() {
                         
                         {3, 0, 0, 5, 7, 6, 0, 6}
     };
+
+     int tabela[8][4];
+    for (int i = 0; i < 8; i++){
+        tabela[i][0] = i;
+        tabela[i][1] = 0;
+        tabela[i][2] = INT_MAX;
+        tabela[i][3] = -1;
+    }
