@@ -21,3 +21,14 @@ void Tabela(int tabela[8][4], int i) {
         printf("\n");
     }   
 }
+
+void printResultado (int tabela[8][4]) {
+    printf("\nResultado\n");
+    int soma = 0;
+    for (int i = 0; i < 8; i++){
+        printf("(%d,%d,), ", tabela[i][0], tabela[i][3]);
+        soma += tabela[i][2];
+
+    }
+    printf("\nSoma: %d\n", soma);
+}
