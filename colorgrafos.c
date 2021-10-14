@@ -35,3 +35,10 @@ void printTabela (int tabela[7][3]) {
                 num[0] = 1;
             }
         }
+        if (tabela[i][1] == 2) {
+            printf("%d\t|\t⚫", tabela[i][0]);
+            if (num[1] == 0){
+                contagem++;
+                num[1] = 1;
+            }
+        }
