@@ -59,3 +59,19 @@ void printTabela (int tabela[7][3]) {
                 num[3] = 1;
             }
         }
+        printf("\n");
+    }
+    printf("Número de cores usadas: %d\n", contagem);
+}
+
+int maiorGrauNColorido (int tabela[7][3]){
+    int maiorGrau = 0;
+    int retorno;
+    for(int i = 0; i < 7; i++){
+        if (maiorGrau < tabela[i][2] && tabela[i][1] == 0){
+            maiorGrau = tabela[i][2];
+            retorno = i;
+        }
+    }
+    return retorno;
+}
