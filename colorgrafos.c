@@ -75,3 +75,16 @@ int maiorGrauNColorido (int tabela[7][3]){
     }
     return retorno;
 }
+
+void medeGrau (int mat[7][7], int tabela[7][3]){
+    int grau;
+    for (int i = 0; i < 7; i++){
+        grau = 0;
+        for (int j = 0; j < 7; j++){
+            if (mat[i][j] != 0){
+                grau++;
+            }
+        }
+        tabela[i][2] = grau;
+    }
+}
