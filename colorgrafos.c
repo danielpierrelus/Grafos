@@ -21,3 +21,17 @@ void coloreGrafo (int mat[7][7], int tabela[7][3]) {
     }
     printTabela(tabela);
 }
+
+void printTabela (int tabela[7][3]) {
+    int num[4] = {0,0,0,0};
+    int contagem = 0;
+    printf("Reultado:\n");
+    printf("vert|  cor\n");
+    for (int i = 0; i < 7; i++){
+        if (tabela[i][1] == 1){
+            printf("%d\t|\t🔴", tabela[i][0]);
+            if (num[0] == 0){
+                contagem++;
+                num[0] = 1;
+            }
+        }
